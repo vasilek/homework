@@ -1,6 +1,3 @@
-/**
- * Created by tvs on 06.03.2017.
- */
 import MenuItem from 'material-ui/MenuItem'
 import React, { Component } from 'react';
 import { Link } from 'react-router';
