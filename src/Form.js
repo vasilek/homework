@@ -25,10 +25,10 @@ const validate = values => {
         if (!values[ field ]) {
             errors[ field ] = 'Required'
         }
-    })
+    });
     // alert(errors);
     return errors
-}
+};
 
 
 class Form extends Component {
@@ -93,7 +93,10 @@ Form = connect(
     dispatch => ({
 
         onAddPerson: (personData) => {
-            dispatch({type: 'ADD_PERSON', payload: personData})
+            const personDataList = personData.split(' ');
+            if (personDataList[0] !== '' && personDataList[1] !== '' && personDataList[2] !== '' ) {
+                dispatch({type: 'ADD_PERSON', payload: personData})
+            }
         }
     })
     )(Form);
